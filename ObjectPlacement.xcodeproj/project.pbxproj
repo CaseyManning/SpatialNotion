@@ -20,6 +20,8 @@
 		39818AD62AD9960900C5C0FA /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39818AD52AD9960900C5C0FA /* PersistenceManager.swift */; };
 		399EF6C82AE0054000EDF4C4 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399EF6C72AE0054000EDF4C4 /* DeleteButton.swift */; };
 		39BFB61D2AE9404A007A7EFE /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BFB61C2AE9404A007A7EFE /* DragState.swift */; };
+		824E0B462B9BD19400D7D5E5 /* PDFWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824E0B452B9BD19400D7D5E5 /* PDFWindow.swift */; };
+		8266029F2B9BCE930036BA6A /* greenwald.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8266029E2B9BCE930036BA6A /* greenwald.pdf */; };
 		EB501F592AE288A8005214CE /* PlaneProjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB501F582AE288A8005214CE /* PlaneProjector.swift */; };
 		EB5034152AF137FA0020B48F /* InfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5034142AF137FA0020B48F /* InfoLabel.swift */; };
 		EBA142DF2AD431AD00FB20AD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA142DE2AD431AD00FB20AD /* HomeView.swift */; };
@@ -48,6 +50,8 @@
 		39818AD52AD9960900C5C0FA /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		399EF6C72AE0054000EDF4C4 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		39BFB61C2AE9404A007A7EFE /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
+		824E0B452B9BD19400D7D5E5 /* PDFWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFWindow.swift; sourceTree = "<group>"; };
+		8266029E2B9BCE930036BA6A /* greenwald.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = greenwald.pdf; path = ObjectPlacement/Views/greenwald.pdf; sourceTree = "<group>"; };
 		A30182D16871D86E05AF05A9 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		A45DF7DFFC4D11715B00A4A8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C138A54FD285DC0E83F51A16 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				A45DF7DFFC4D11715B00A4A8 /* README.md */,
+				8266029E2B9BCE930036BA6A /* greenwald.pdf */,
 				394D18C92A960EB9009E3A2E /* ObjectPlacement */,
 				394D18C82A960EB9009E3A2E /* Products */,
 				2F28A76B35ACDB0AF835CFD5 /* Configuration */,
@@ -142,6 +147,7 @@
 				EBDA9DAB2AD44D140040C78E /* ObjectPlacementRealityView.swift */,
 				EBA142E02AD4398600FB20AD /* ObjectSelectionView.swift */,
 				399EF6C72AE0054000EDF4C4 /* DeleteButton.swift */,
+				824E0B452B9BD19400D7D5E5 /* PDFWindow.swift */,
 				EB5034142AF137FA0020B48F /* InfoLabel.swift */,
 				EBF8620D2AD83CD7002E5E81 /* TooltipView.swift */,
 				EBD516BA2AF5576100A49594 /* PlacementTooltip.swift */,
@@ -235,6 +241,7 @@
 				327FB4A12B4F35F300E35D2B /* Cube.usdz in Resources */,
 				327FB4A22B4F35F300E35D2B /* Cone.usdz in Resources */,
 				327FB4A02B4F35F300E35D2B /* Box.usdz in Resources */,
+				8266029F2B9BCE930036BA6A /* greenwald.pdf in Resources */,
 				327FB4A32B4F35F300E35D2B /* Cylinder.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +265,7 @@
 				393E4AB02A9629A7005C9691 /* GeometryUtilities.swift in Sources */,
 				393E4AAC2A9625E3005C9691 /* PlacementManager.swift in Sources */,
 				39818AD42AD9926500C5C0FA /* PlaneAnchorHandler.swift in Sources */,
+				824E0B462B9BD19400D7D5E5 /* PDFWindow.swift in Sources */,
 				39BFB61D2AE9404A007A7EFE /* DragState.swift in Sources */,
 				EBE296552AE27E5900F6838C /* AppState.swift in Sources */,
 				EBF8620E2AD83CD7002E5E81 /* TooltipView.swift in Sources */,

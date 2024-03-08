@@ -6,6 +6,7 @@ The menu for interacting with objects.
 */
 
 import SwiftUI
+import PDFKit
 
 struct ObjectPlacementMenuView: View {
     let appState: AppState
@@ -14,6 +15,7 @@ struct ObjectPlacementMenuView: View {
     
     @State private var presentConfirmationDialog = false
 
+    
     var body: some View {
         VStack(spacing: 20) {
             ObjectSelectionView(
@@ -24,7 +26,7 @@ struct ObjectPlacementMenuView: View {
                     appState.placementManager?.select(model)
                 }
             }
-
+            
             Button("Remove all objects", systemImage: "trash") {
                 presentConfirmationDialog = true
             }
@@ -48,11 +50,4 @@ struct ObjectPlacementMenuView: View {
             .buttonStyle(.borderless)
         }
     }
-}
-
-#Preview(windowStyle: .plain) {
-    ObjectPlacementMenuView(appState: AppState.previewAppState(selectedIndex: 1))
-        .padding(20)
-        .frame(width: 400)
-        .glassBackgroundEffect()
 }

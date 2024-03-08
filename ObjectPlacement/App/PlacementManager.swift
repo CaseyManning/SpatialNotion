@@ -307,10 +307,14 @@ final class PlacementManager {
         object.position = placementLocation.position
         object.orientation = placementLocation.orientation
         
+        
+        object.uiOrigin.addChild(PDFWindow())
+        
         Task {
             await persistenceManager.attachObjectToWorldAnchor(object)
         }
         placementState.userPlacedAnObject = true
+        
     }
     
     @MainActor

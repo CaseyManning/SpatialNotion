@@ -58,10 +58,12 @@ class AppState {
 
     var allRequiredProvidersAreSupported: Bool {
         WorldTrackingProvider.isSupported && PlaneDetectionProvider.isSupported
+//        true
     }
 
     var canEnterImmersiveSpace: Bool {
         allRequiredAuthorizationsAreGranted && allRequiredProvidersAreSupported
+//        true
     }
 
     func requestWorldSensingAuthorization() async {

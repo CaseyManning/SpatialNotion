@@ -7,6 +7,7 @@ The main user interface.
 
 import SwiftUI
 import ARKit
+import PDFKit
 
 struct HomeView: View {
     let appState: AppState
@@ -17,7 +18,61 @@ struct HomeView: View {
     @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
     @Environment(\.scenePhase) private var scenePhase
 
+    // PDF Viewer
+    struct PDFKitView: UIViewRepresentable {
+        
+        let pdfDocument: PDFDocument
+        
+        init(pdfData pdfDoc: PDFDocument) {
+            self.pdfDocument = pdfDoc
+        }
+        
+        func makeUIView(context: Context) -> PDFView {
+            let pdfView = PDFView()
+            pdfView.document = pdfDocument
+            pdfView.autoScales = true
+            return pdfView
+        }
+        
+        func updateUIView(_ pdfView: PDFView, context: Context) {
+            pdfView.document = pdfDocument
+        }
+    }
+
+    #Preview(windowStyle: .plain) {
+        ObjectPlacementMenuView(appState: AppState.previewAppState(selectedIndex: 1))
+            .padding(20)
+            .frame(width: 400)
+            .glassBackgroundEffect()
+    }
+
+    private func generatePDF() -> Data {
+            
+            let pdfRenderer = UIGraphicsPDFRenderer(bounds: CGRect(x: 0, y: 0, width: 595, height: 842)) // A4 paper size
+            
+            let data = pdfRenderer.pdfData { context in
+                
+                context.beginPage()
+                
+                let attributes = [
+                    NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 72)
+                ]
+                // adding text to pdf
+                let text = "I'm a PDF!"
+                text.draw(at: CGPoint(x: 20, y: 50), withAttributes: attributes)
+                
+                // adding image to pdf from assets
+                // add an image to xcode assets and rename this.
+
+            }
+            
+            return data
+            
+        }
+    
     var body: some View {
+        let url = Bundle.main.url(forResource: "greenwald", withExtension: "pdf")!
+        PDFKitView(pdfData: PDFDocument(url: url)!)
         VStack {
             VStack(spacing: 20) {
                 Text("Object Placement")

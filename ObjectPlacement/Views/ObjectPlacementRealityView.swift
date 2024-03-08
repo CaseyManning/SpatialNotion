@@ -17,10 +17,11 @@ struct ObjectPlacementRealityView: View {
     @State private var collisionBeganSubscription: EventSubscription? = nil
     @State private var collisionEndedSubscription: EventSubscription? = nil
     
-    private enum Attachments {
+    public enum Attachments {
         case placementTooltip
         case dragTooltip
         case deleteButton
+        case pdf;
     }
 
     var body: some View {
